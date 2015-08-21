@@ -10,7 +10,7 @@
 <body>
     <div class="row">
         <div class="col-sm-1 col-sm-offset-2">
-            <img src="img/22.png" style="height: 100px; width: 100px;" />
+            <img src="img/logo.png" style="height: 100px; width: 100px;" />
         </div>
         <div class="col-sm-3">
             <h3>VERIFIKIMI I N&Euml;NSHKRIMIT DIGJITAL</h3>
@@ -21,8 +21,8 @@
             <div class="col-sm-4 col-sm-offset-2">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="index.aspx">Verifikimi</a></li>
-                    <li role="presentation"><a href="instruction.html">Instrukcionet</a></li>
-                    <li role="presentation"><a href="#">Kontakti</a></li>
+                    <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
+                    <li role="presentation"><a href="kontakti.aspx">Kontakti</a></li>
                 </ul>
             </div>
         </div>
@@ -30,9 +30,8 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div style="box-shadow: 0px 10px 20px #888888;">
-                <img src="img/1.png" style="height: 100%; width: 100%;" />
+                <img src="img/header.jpg" style="height: 100%; width: 100%;" />
             </div>
-
         </div>
     </div>
     <br />
@@ -47,8 +46,8 @@
     </div>
     <br />
     <div class="row">
-        <div id="uploadFile" runat="server">
-            <div class="panel panel-primary col-sm-6 col-sm-offset-3">
+        <div id="uploadFile" runat="server" class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-primary">
                 <div class="panel-heading">Verifiko nenshkrimin digjital te dokumentit</div>
                 <div class="panel-body">
                     <form id="form1" method="post" enctype="multipart/form-data" runat="server">
@@ -56,7 +55,7 @@
                         <input type="file" id="fileUpload" runat="server" class="btn btn-info" />
                         <br />
                         <button type="submit" id="verifiko" class="btn btn-primary" aria-label="Left Align" runat="server">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>Verifiko
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Verifiko
                         </button>
                     </form>
                     <br />
@@ -194,7 +193,7 @@
         <div class="col-sm-8 col-sm-offset-2">
             <hr style="margin-bottom: 5px; border-color: #2f2f2f" />
             <p align="justify">
-                <small>Shenim: Bazuar ne Ligjin Per Sherbimet e Shoqerise Informatike, Neni 1 - Përcakton
+                <small class="text-warning">Shenim: Bazuar ne Ligjin Per Sherbimet e Shoqerise Informatike, Neni 1 - Përcakton
                     dokumentacionin në formë elektronike juridikisht të barabartë me dokumentacionin 
                     tradicional të paraqitur në format të letrës.
                 </small>

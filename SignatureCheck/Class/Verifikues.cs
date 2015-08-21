@@ -42,6 +42,12 @@ namespace SignatureCheck
 
             nenshkruesi.Nenshkruesi = CertificateInfo.GetSubjectFields(cert).GetField("CN");
 
+            string issuer = certificate.Issuer;
+            nenshkruesi.IssuerCN = GetIssuer(issuer, "CN=");
+            nenshkruesi.IssuerOU = GetIssuer(issuer, "OU=");
+            nenshkruesi.IssuerO = GetIssuer(issuer, "O=");
+            nenshkruesi.IssuerC = GetIssuer(issuer, "C=");
+
             if (nenshkruesi.IssuerC == "KS")
             {
                 //largimi i [EMAIL] prej cn
@@ -61,11 +67,7 @@ namespace SignatureCheck
             nenshkruesi.CertifikataValideDeri = certificate.GetExpirationDateString();
             nenshkruesi.SerialNumber = certificate.SerialNumber;
 
-            string issuer = certificate.Issuer;
-            nenshkruesi.IssuerCN = GetIssuer(issuer, "CN=");
-            nenshkruesi.IssuerOU = GetIssuer(issuer, "OU=");
-            nenshkruesi.IssuerO = GetIssuer(issuer, "O=");
-            nenshkruesi.IssuerC = GetIssuer(issuer, "C=");
+            
 
             //verifikimi
             if (pkcs7.Verify())
