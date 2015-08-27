@@ -67,8 +67,6 @@ namespace SignatureCheck
             nenshkruesi.CertifikataValideDeri = certificate.GetExpirationDateString();
             nenshkruesi.SerialNumber = certificate.SerialNumber;
 
-            
-
             //verifikimi
             if (pkcs7.Verify())
             {

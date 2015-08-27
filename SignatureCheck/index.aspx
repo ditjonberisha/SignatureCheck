@@ -16,17 +16,18 @@
             <h3>VERIFIKIMI I N&Euml;NSHKRIMIT DIGJITAL</h3>
         </div>
     </div>
+
     <nav class="navbar navbar-default" style="height: 60px; margin-bottom: 0px;">
-        <div class="row" style="padding-top: 10px;">
-            <div class="col-sm-4 col-sm-offset-2">
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="index.aspx">Verifikimi</a></li>
-                    <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
-                    <li role="presentation"><a href="kontakti.aspx">Kontakti</a></li>
-                </ul>
-            </div>
+        <div class="col-sm-4 col-sm-offset-2" style="padding-top: 10px;">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="index.aspx">Verifikimi</a></li>
+                <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
+                <li role="presentation"><a href="kontakti.aspx">Kontakti</a></li>
+                <li role="presentation"><a href="test.aspx">Test Data</a></li>
+            </ul>
         </div>
     </nav>
+    
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div style="box-shadow: 0px 10px 20px #888888;">
@@ -38,8 +39,7 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <p align="justify">
-                Mire se vini ne web site per verfikimi i nenshkrimit digjital.
-                Me kete sherbim ju mundeni te verifikoni nenshkrimin digjital te dokumenteve PDF per autencitetin e tyre ne vetem disa sekonda.
+                Web site per verfikimi i nenshkrimit digjital, ju mundeson verifikimin e nenshkrimit digjital te dokumenteve PDF per autenticitetin e tyre ne vetem disa sekonda.
                 Si rezultat ju do te keni nje raport me te dhenat e nenshkruesit, te cilin raport mund edhe ta shkarkoni.
             </p>
         </div>
@@ -50,6 +50,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Verifiko nenshkrimin digjital te dokumentit</div>
                 <div class="panel-body">
+                    <p style="color: red;"><b><%=GetMessage() %></b></p>
                     <form id="form1" method="post" enctype="multipart/form-data" runat="server">
                         <label>Dokumenti: </label>
                         <input type="file" id="fileUpload" runat="server" class="btn btn-info" />
@@ -57,9 +58,8 @@
                         <button type="submit" id="verifiko" class="btn btn-primary" aria-label="Left Align" runat="server">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Verifiko
                         </button>
-                    </form>
+                    </form>  
                     <br />
-                    <p style="color: red;"><%=GetMessage() %></p>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th colspan="3">Dokumenti</th>
+                                    <th colspan="3" style="background-color:rgb(66, 139, 202); color:white;">Dokumenti</th>
                                 </tr>
                             </thead>
                             <tr>
@@ -100,10 +100,10 @@
                         </table>
                         <% foreach (var nenshkrimi in dokumenti.Nenshkrimet)
                            { %>
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover" style="table-layout: fixed;">
                             <thead>
                                 <tr>
-                                    <th colspan="2">Te dhenat e nenshkruesit</th>
+                                    <th colspan="2" style="background-color:rgb(66, 139, 202); color:white;">Te dhenat e nenshkruesit</th>
                                 </tr>
                             </thead>
                             <tr>
@@ -152,29 +152,29 @@
                                     <%=nenshkrimi.SerialNumber %></td>
                             </tr>
                         </table>
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover" style="table-layout: fixed;">
                             <thead>
                                 <tr>
-                                    <th colspan="2">Te dhenat e leshuesit te qerifikates</th>
+                                    <th colspan="2" style="background-color:rgb(66, 139, 202); color:white;">Te dhenat e leshuesit te qerifikates</th>
                                 </tr>
                             </thead>
                             <tr>
-                                <th>CN</th>
+                                <th>Emri(CN)</th>
                                 <td>
                                     <%=nenshkrimi.IssuerCN %></td>
                             </tr>
                             <tr>
-                                <th>OU</th>
+                                <th>Njesia organizative(OU)</th>
                                 <td>
                                     <%=nenshkrimi.IssuerOU %></td>
                             </tr>
                             <tr>
-                                <th>O</th>
+                                <th>Organizata(O)</th>
                                 <td>
                                     <%=nenshkrimi.IssuerO %></td>
                             </tr>
                             <tr>
-                                <th>C</th>
+                                <th>Shteti(C)</th>
                                 <td>
                                     <%=nenshkrimi.IssuerC %></td>
                             </tr>
@@ -183,6 +183,7 @@
                         <form id="formabutton" runat="server">
                             <asp:Button class="btn btn-primary" ID="BtnShkarkoRaportin" Text="Shkarko raportin" OnClick="ShkarkoButton_Click" runat="server" />
                             <asp:Button class="btn btn-primary" ID="BtnShkarkoCert" Text="Shkarko certifikaten" OnClick="ShkarkoCertifikaten_Click" runat="server" />
+                            <asp:Button class="btn btn-primary" ID="BtnVerfikoDocTjeter" Text="Verifo dokument tjeter" OnClick="VerifikoDocTjeter_Click" runat="server" />
                         </form>
                     </div>
                 </div>
