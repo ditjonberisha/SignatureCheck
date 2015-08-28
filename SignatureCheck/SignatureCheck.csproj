@@ -61,10 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\header.jpg" />
+    <Content Include="img\icon.ico" />
     <Content Include="instruction.aspx" />
     <Content Include="kontakti.aspx" />
     <Content Include="packages.config" />
-    <Content Include="TestData\Ditjon Berisha.pdf e nenshkruar1.pdf" />
+    <Content Include="TestData\db.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,7 +82,7 @@
     <Content Include="img\logo.png" />
     <Content Include="img\not.png" />
     <Content Include="img\ok.png" />
-    <Content Include="index.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -107,12 +108,12 @@
     <Compile Include="Class\IVerifikues.cs" />
     <Compile Include="Class\Nenshkrim.cs" />
     <Compile Include="Class\Verifikues.cs" />
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="instruction.aspx.cs">
       <DependentUpon>instruction.aspx</DependentUpon>

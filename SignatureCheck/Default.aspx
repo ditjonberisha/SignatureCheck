@@ -1,11 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SignatureCheck.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SignatureCheck.index" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Verifikimi i nenshkrimit digjital</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <style>
+        p {
+            font-family: Georgia, serif;
+        }
+        h3 {
+            font-family: Georgia, serif;
+        }
+    </style>
 </head>
 <body>
     <div class="row">
@@ -18,9 +27,9 @@
     </div>
 
     <nav class="navbar navbar-default" style="height: 60px; margin-bottom: 0px;">
-        <div class="col-sm-4 col-sm-offset-2" style="padding-top: 10px;">
+        <div class="col-sm-6 col-sm-offset-2" style="padding-top: 10px;">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="index.aspx">Verifikimi</a></li>
+                <li role="presentation" class="active"><a href="Default.aspx">Verifikimi</a></li>
                 <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
                 <li role="presentation"><a href="kontakti.aspx">Kontakti</a></li>
                 <li role="presentation"><a href="test.aspx">Test Data</a></li>
@@ -38,6 +47,7 @@
     <br />
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
+            <h3>Verifikimi</h3>
             <p align="justify">
                 Web site per verfikimi i nenshkrimit digjital, ju mundeson verifikimin e nenshkrimit digjital te dokumenteve PDF per autenticitetin e tyre ne vetem disa sekonda.
                 Si rezultat ju do te keni nje raport me te dhenat e nenshkruesit, te cilin raport mund edhe ta shkarkoni.
@@ -205,7 +215,7 @@
     <br />
     <div class="row">
         <nav class="navbar navbar-default" style="background-color: #444; margin-bottom: 0px;">
-            <p style="color: white; text-align: center;">
+            <p style="color: white; text-align: center; padding-top: 10px;">
                 &copy; Copyright <%= DateTime.Now.ToString("yyyy") %> Ditjon Berisha
             </p>
         </nav>

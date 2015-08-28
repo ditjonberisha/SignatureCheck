@@ -5,7 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Kontakti</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <style>
+        p {
+            font-family: Georgia, serif;
+          }
+        h3 {
+            font-family: Georgia, serif;
+        }
+    </style>
 </head>
 <body>
     <div class="row">
@@ -17,9 +26,9 @@
         </div>  
     </div>
     <nav class="navbar navbar-default" style="height:60px; margin-bottom: 0px;">
-        <div class="col-sm-4 col-sm-offset-2" style="padding-top:10px;">
+        <div class="col-sm-6 col-sm-offset-2" style="padding-top:10px;">
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="index.aspx">Verifikimi</a></li>
+                <li role="presentation"><a href="Default.aspx">Verifikimi</a></li>
                 <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
                 <li role="presentation" class="active"><a href="kontakti.aspx">Kontakti</a></li>
                 <li role="presentation"><a href="test.aspx">Test Data</a></li>
@@ -35,9 +44,8 @@
     </div>
     <br />
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-8 col-sm-offset-2">
             <h3>Kontakti</h3>
-            <br />
             <p align="justify">
                 Me posht mundeni te na kontaktoni per qdo pytje, sygjerim apo shqetesim tuajin.
                 Ju lutemi sigurohuni qe te plotesoni te gjitha fushat te shenuara me *.
@@ -63,7 +71,7 @@
 
     <div class="row">
         <nav class="navbar navbar-default" style="background-color: #444; margin-bottom: 0px;">
-            <p style="color: white; text-align: center;">
+            <p style="color: white; text-align: center; padding-top: 10px;">
                 &copy; Copyright <%= DateTime.Now.ToString("yyyy") %> Ditjon Berisha
             </p>
         </nav>

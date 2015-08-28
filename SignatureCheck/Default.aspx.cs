@@ -104,12 +104,12 @@ namespace SignatureCheck
 
         protected void ShkarkoCertifikaten_Click(Object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         protected void VerifikoDocTjeter_Click(Object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         
