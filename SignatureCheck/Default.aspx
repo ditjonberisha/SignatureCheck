@@ -19,16 +19,16 @@
 <body>
     <form id="form" runat="server">
     <div class="row">
-        <div class="col-sm-1 col-sm-offset-2">
+        <div class="col-sm-1 col-sm-offset-2 col-xs-1 col-xs-offset-2">
             <img src="img/logo.png" style="height: 100px; width: 100px;" />
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-xs-3">
             <h3><asp:Literal ID="header" runat="server" Text="<%$Resources:db.lang,header%>"/></h3>
         </div>
-        <div class="col-sm-2 col-sm-offset-2">
+        <div class="col-sm-2 col-sm-offset-2 col-xs-2 col-xs-offset-2">
             <br />
-            <a href="?lang=en" runat="server" id="en"><img src="img/us.png" style="height: 21px; width: 40px;" />English</a> |
-            <a href="?lang=sq" runat="server" id="sq"><img src="img/al.jpg" style="height: 21px; width: 40px;" />Shqip</a>
+            <a href="?lang=en" runat="server" id="en"><img src="img/us.png" style="height: 21px; width: 40px;" /> English</a> |
+            <a href="?lang=sq" runat="server" id="sq"><img src="img/al.jpg" style="height: 21px; width: 40px;" /> Shqip</a>
         </div>
     </div>
 
