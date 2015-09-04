@@ -100,6 +100,16 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\db.lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\db.lang.sq-AL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.lang.sq-AL.resx</DependentUpon>
+    </Compile>
     <Compile Include="Class\CreatePDF.cs" />
     <Compile Include="Class\Dokument.cs" />
     <Compile Include="Class\DokumentLexues.cs" />
@@ -129,6 +139,9 @@
     <Compile Include="kontakti.aspx.designer.cs">
       <DependentUpon>kontakti.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
@@ -138,7 +151,18 @@
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_GlobalResources\db.lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>db.lang.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\db.lang.sq-AL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>db.lang.sq-AL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

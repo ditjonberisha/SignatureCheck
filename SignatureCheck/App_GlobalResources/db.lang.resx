@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnContact" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="btnReportdownload" xml:space="preserve">
+    <value>Download report</value>
+  </data>
+  <data name="btnTest" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btnVerify" xml:space="preserve">
+    <value>Start verification</value>
+  </data>
+  <data name="btnVerifyanother" xml:space="preserve">
+    <value>Verify further documents</value>
+  </data>
+  <data name="docReport" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="emailContact" xml:space="preserve">
+    <value>E-mail*</value>
+  </data>
+  <data name="enkriptalg" xml:space="preserve">
+    <value>Encryption Algorithm</value>
+  </data>
+  <data name="filenameReport" xml:space="preserve">
+    <value>Name of signed file</value>
+  </data>
+  <data name="FirstnameContact" xml:space="preserve">
+    <value>First Name*</value>
+  </data>
+  <data name="firstnameReport" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="hashalg" xml:space="preserve">
+    <value>Hash Algorithm</value>
+  </data>
+  <data name="HashReport" xml:space="preserve">
+    <value>Hash value of signed data (SHA256)</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>SIGNATURE CHECK</value>
+  </data>
+  <data name="headerTest" xml:space="preserve">
+    <value>Test Data</value>
+  </data>
+  <data name="infoContact" xml:space="preserve">
+    <value>Below you can contact us for every question, suggestion or concern. Please make sure to fill out all the fields marked with *.</value>
+  </data>
+  <data name="infoReport" xml:space="preserve">
+    <value>Signature check</value>
+  </data>
+  <data name="infoTest" xml:space="preserve">
+    <value>For testing our service, if you have not digitally signed document, below you can download a document that you can use as a test. After you download the file you can go to the page for verification and check the downloaded document.</value>
+  </data>
+  <data name="issuerc" xml:space="preserve">
+    <value>Country(C)</value>
+  </data>
+  <data name="issuercn" xml:space="preserve">
+    <value>Name(CN)</value>
+  </data>
+  <data name="issuerinfo" xml:space="preserve">
+    <value>Info of certificate issuer</value>
+  </data>
+  <data name="issuero" xml:space="preserve">
+    <value>Organization(O)</value>
+  </data>
+  <data name="issuerou" xml:space="preserve">
+    <value>Organizational unit(OU)</value>
+  </data>
+  <data name="LastnameContact" xml:space="preserve">
+    <value>Last Name*</value>
+  </data>
+  <data name="lastnameReport" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="mnuContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="mnuInstruction" xml:space="preserve">
+    <value>Instruction</value>
+  </data>
+  <data name="mnuTest" xml:space="preserve">
+    <value>Test Data</value>
+  </data>
+  <data name="mnuVerify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="msgContact" xml:space="preserve">
+    <value>Message*</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note: Based on the Law on Information Society Services, Article 1 - Defines electronic documentation identical to Its traditional Legally counterpart in paper format.</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Verification Report</value>
+  </data>
+  <data name="serialnumber" xml:space="preserve">
+    <value>Certificate serial number</value>
+  </data>
+  <data name="signerInfo" xml:space="preserve">
+    <value>Certificate information</value>
+  </data>
+  <data name="signerReport" xml:space="preserve">
+    <value>Signer</value>
+  </data>
+  <data name="signingtime" xml:space="preserve">
+    <value>Signing time</value>
+  </data>
+  <data name="sizeReport" xml:space="preserve">
+    <value>Size of signed file</value>
+  </data>
+  <data name="subjectContact" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="telContact" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="testDoc" xml:space="preserve">
+    <value>Digitally signed test document(signed_document.pdf)</value>
+  </data>
+  <data name="TimeReport" xml:space="preserve">
+    <value>Verification date and time</value>
+  </data>
+  <data name="uploadDoc" xml:space="preserve">
+    <value>Document:</value>
+  </data>
+  <data name="uploadHeader" xml:space="preserve">
+    <value>Verify the digital signature of the document</value>
+  </data>
+  <data name="validfrom" xml:space="preserve">
+    <value>Certificate valid from</value>
+  </data>
+  <data name="validto" xml:space="preserve">
+    <value>Certificate valid to</value>
+  </data>
+  <data name="welcomeParagraph" xml:space="preserve">
+    <value>Web site for verification of digital signature, allows you to verify the digital signature of PDF documents for authenticity in only a few seconds. As a result you will have a report with the data of signatories, which report can be downloaded.</value>
+  </data>
+</root>

@@ -9,6 +9,7 @@ namespace SignatureCheck
 {
     public interface ICreatePDF
     {
-        MemoryStream KrijoPdf(Dokument dokumenti);
+        MemoryStream KrijoRaportin(Dokument dokumenti);
+        MemoryStream CreateReport(Dokument dokumenti);
     }
 }

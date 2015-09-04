@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Test data</title>
+    <title><asp:Literal ID="Literal3" runat="server" Text="<%$Resources:db.lang,mnuTest%>"/></title>
     <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <style>
@@ -22,16 +22,20 @@
             <img src="img/logo.png" style="height:100px; width:100px;" />
         </div>
         <div class="col-sm-3">
-            <h3>VERIFIKIMI I N&Euml;NSHKRIMIT DIGJITAL</h3>
+            <h3><asp:Literal ID="header" runat="server" Text="<%$Resources:db.lang,header%>"/></h3>
         </div>  
+        <div class="col-sm-2 col-sm-offset-3">
+            <a href="?lang=en" runat="server" id="en">EN</a>
+            <a href="?lang=sq" runat="server" id="sq">AL</a>
+        </div>
     </div>
     <nav class="navbar navbar-default" style="height:60px; margin-bottom: 0px;">
         <div class="col-sm-6 col-sm-offset-2" style="padding-top: 10px;">
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="Default.aspx">Verifikimi</a></li>
-                <li role="presentation"><a href="instruction.aspx">Instruksionet</a></li>
-                <li role="presentation"><a href="kontakti.aspx">Kontakti</a></li>
-                <li role="presentation" class="active"><a href="test.aspx">Test Data</a></li>
+                <li role="presentation"><a href="Default.aspx"><asp:Literal ID="mnuVerify" runat="server" Text="<%$Resources:db.lang,mnuVerify%>"/></a></li>
+                <li role="presentation"><a href="instruction.aspx"><asp:Literal ID="mnuInstruction" runat="server" Text="<%$Resources:db.lang,mnuInstruction%>"/></a></li>
+                <li role="presentation"><a href="kontakti.aspx"><asp:Literal ID="Literal1" runat="server" Text="<%$Resources:db.lang,mnuContact%>"/></a></li>
+                <li role="presentation" class="active"><a href="test.aspx"><asp:Literal ID="Literal2" runat="server" Text="<%$Resources:db.lang,mnuTest%>"/></a></li>    
             </ul>
         </div>
     </nav>
@@ -45,10 +49,9 @@
     <br />
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <h3>Test data</h3>
+            <h3><asp:Literal ID="Literal4" runat="server" Text="<%$Resources:db.lang,mnuTest%>"/></h3>
             <p align="justify">
-                Per testimin e sherbimit tone, nese nuk keni dokument te nenshkruar ne menyr digjitale, me posht mundeni te shkarkoni nje dokument qe mund ta perdorni si testim.
-                Pasi ta shkarkoni dokumentin ju mundeni te ktheheni te faqja per verifikim dhe ta beni verifikimin e dokumentit te shkarkuar.
+                <asp:Literal ID="Literal5" runat="server" Text="<%$Resources:db.lang,infoTest%>"/>
             </p>
         </div>
     </div>
@@ -56,13 +59,13 @@
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-primary">
-                <div class="panel-heading">Test dokumenti</div>
+                <div class="panel-heading"><asp:Literal ID="Literal7" runat="server" Text="<%$Resources:db.lang,headerTest%>"/></div>
                 <div class="panel-body">
                     <form runat="server">
                     <table class="table table-striped">
                         <tr>
-                            <td>Test dokumenti i nenshkruar ne menyre digjitale(dokumenti_i_nenshkruar.pdf) </td>
-                            <td><asp:Button class="btn btn-primary" OnClick="ShkarkoTestData_Click" Text="Shkarko" runat="server" /></td>
+                            <td><asp:Literal ID="Literal6" runat="server" Text="<%$Resources:db.lang,testDoc%>"/></td>
+                            <td><asp:Button class="btn btn-primary" OnClick="ShkarkoTestData_Click" Text="<%$Resources:db.lang,btnTest%>" runat="server" /></td>
                         </tr>
                     </table>
                     </form>

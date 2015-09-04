@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SignatureCheck
 {
-    public partial class Instruction : System.Web.UI.Page
+    public partial class Instruction : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

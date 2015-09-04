@@ -66,7 +66,7 @@ namespace SignatureCheck
             tbl.AddCell(cell);
         }
 
-        public MemoryStream KrijoPdf(Dokument dokumenti)
+        public MemoryStream KrijoRaportin(Dokument dokumenti)
         {
             var doc = new Document();
             doc.SetMargins(50f, 50f, 10f, 50f);
@@ -195,6 +195,145 @@ namespace SignatureCheck
 
             //footer
             string shenim = "Shenim: Bazuar ne Ligjin Per Sherbimet e Shoqerise Informatike, Neni 1 - Përcakton dokumentacionin në formë elektronike juridikisht të barabartë me dokumentacionin tradicional të paraqitur në format të letrës.";
+            Paragraph footer = new Paragraph(shenim, new Font(Font.FontFamily.UNDEFINED, 8, Font.NORMAL, new BaseColor(32, 32, 32)));
+            footer.SetLeading(12f, 0);
+            footer.SpacingBefore = 0f;
+            doc.Add(footer);
+
+            doc.Close();
+
+            return ms;
+        }
+
+        public MemoryStream CreateReport(Dokument dokumenti)
+        {
+            var doc = new Document();
+            doc.SetMargins(50f, 50f, 10f, 50f);
+
+            var ms = new MemoryStream();
+            PdfWriter.GetInstance(doc, ms);
+
+            doc.Open();
+
+            Paragraph webpage = new Paragraph("http://eid.uni-pr.edu/signaturecheck/", new Font(Font.FontFamily.UNDEFINED, 10, Font.NORMAL));
+            webpage.SpacingAfter = 20f;
+            webpage.Alignment = 2;
+            doc.Add(webpage);
+
+            Paragraph header = new Paragraph("Verification Report", new Font(Font.FontFamily.UNDEFINED, 16, Font.BOLD));
+            header.SpacingAfter = 30f;
+            header.Alignment = 1;
+            doc.Add(header);
+
+            PdfPTable tblDokumenti = new PdfPTable(3);
+            float[] widths = new float[] { 40f, 10f, 50f };
+            tblDokumenti.SetWidths(widths);
+            tblDokumenti.SpacingAfter = 20;
+
+            CreateCell(tblDokumenti, "Document", 3, 0, true, new BaseColor(66, 139, 202), new BaseColor(255, 255, 255));
+
+            CreateCell(tblDokumenti, "Signature check", 1, 0, true, new BaseColor(255, 255, 255));
+
+            string rezultatiVerifikimit;
+            iTextSharp.text.Image img;
+            if (dokumenti.Nenshkrimet.Count() == 0)
+            {
+                rezultatiVerifikimit = "This file does not have digital signature.";
+                img = ImgNot;
+            }
+            else if (dokumenti.Nenshkrimet.All(nenshkrim => nenshkrim.Valid))
+            {
+                rezultatiVerifikimit = "Signature verification successful.";
+                img = ImgOK;
+            }
+            else
+            {
+                rezultatiVerifikimit = "Signature verification failed.";
+                img = ImgNot;
+            }
+
+            img.ScaleAbsolute(25, 25);
+
+            CreateCell(tblDokumenti, "", 1, 0, false, new BaseColor(255, 255, 255), null, img);
+            CreateCell(tblDokumenti, rezultatiVerifikimit, 1, 0, false, new BaseColor(255, 255, 255));
+
+            CreateCell(tblDokumenti, "Verification date and time", 1, 0, true, new BaseColor(255, 255, 255));
+            CreateCell(tblDokumenti, dokumenti.KohaVerifikimit.ToString(), 2, 0, false, new BaseColor(255, 255, 255));
+
+            CreateCell(tblDokumenti, "Name of signed file", 1, 0, true, new BaseColor(255, 255, 255));
+            CreateCell(tblDokumenti, dokumenti.Emri, 2, 0, false, new BaseColor(255, 255, 255));
+
+            CreateCell(tblDokumenti, "Hash value of signed data (SHA256)", 1, 0, true, new BaseColor(255, 255, 255));
+            CreateCell(tblDokumenti, dokumenti.VleraHashString, 2, 0, false, new BaseColor(255, 255, 255));
+
+            CreateCell(tblDokumenti, "Size of signed file", 1, 0, true, new BaseColor(255, 255, 255));
+            CreateCell(tblDokumenti, dokumenti.Madhesia, 2, 0, false, new BaseColor(255, 255, 255));
+
+            doc.Add(tblDokumenti);
+
+            foreach (Nenshkrim nenshkrimi in dokumenti.Nenshkrimet)
+            {
+                PdfPTable tblNenshkruesi = new PdfPTable(2);
+                tblNenshkruesi.SpacingAfter = 20;
+
+                CreateCell(tblNenshkruesi, "Certificate information", 2, 0, true, new BaseColor(66, 139, 202), new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Signer", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.Nenshkruesi, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "First Name", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.Emri, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Last Name", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.Mbiemri, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Signing time", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.DataNenshkrimit.ToString(), 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Hash Algorithm", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.AlgoritmiHash, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Encryption Algorithm", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.AlgoritmiEnkriptimit, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Certificate valid from", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.CertifikataValidePrej, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Certificate valid to", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.CertifikataValideDeri, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblNenshkruesi, "Certificate serial number", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblNenshkruesi, nenshkrimi.SerialNumber, 1, 0, false, new BaseColor(255, 255, 255));
+
+                doc.Add(tblNenshkruesi);
+
+                PdfPTable tblIssuer = new PdfPTable(2);
+
+                CreateCell(tblIssuer, "Info of certificate issuer", 2, 0, true, new BaseColor(66, 139, 202), new BaseColor(255, 255, 255));
+
+                CreateCell(tblIssuer, "Name(CN)", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblIssuer, nenshkrimi.IssuerCN, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblIssuer, "Organizational unit(OU)", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblIssuer, nenshkrimi.IssuerOU, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblIssuer, "Organization(O)", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblIssuer, nenshkrimi.IssuerO, 1, 0, false, new BaseColor(255, 255, 255));
+
+                CreateCell(tblIssuer, "Country(C)", 1, 0, true, new BaseColor(255, 255, 255));
+                CreateCell(tblIssuer, nenshkrimi.IssuerC, 1, 0, false, new BaseColor(255, 255, 255));
+
+                tblIssuer.SpacingAfter = 20;
+                doc.Add(tblIssuer);
+            }
+
+            //vije horizontale
+            Paragraph line = new Paragraph(doc.Bottom, new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+            line.SpacingAfter = 0f;
+            doc.Add(line);
+
+            //footer
+            string shenim = "Note: Based on the Law on Information Society Services, Article 1 - Defines electronic documentation identical to Its traditional Legally counterpart in paper format.";
             Paragraph footer = new Paragraph(shenim, new Font(Font.FontFamily.UNDEFINED, 8, Font.NORMAL, new BaseColor(32, 32, 32)));
             footer.SetLeading(12f, 0);
             footer.SpacingBefore = 0f;

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnContact" xml:space="preserve">
+    <value>Dergo</value>
+  </data>
+  <data name="btnReportdownload" xml:space="preserve">
+    <value>Shkarko raportin</value>
+  </data>
+  <data name="btnTest" xml:space="preserve">
+    <value>Shkarko</value>
+  </data>
+  <data name="btnVerify" xml:space="preserve">
+    <value>Verifiko</value>
+  </data>
+  <data name="btnVerifyanother" xml:space="preserve">
+    <value>Verifiko dokument tjeter</value>
+  </data>
+  <data name="docReport" xml:space="preserve">
+    <value>Dokumenti</value>
+  </data>
+  <data name="emailContact" xml:space="preserve">
+    <value>E-mail adresa*</value>
+  </data>
+  <data name="enkriptalg" xml:space="preserve">
+    <value>Algoritmi i Enkriptimit</value>
+  </data>
+  <data name="filenameReport" xml:space="preserve">
+    <value>Emri i dokumentit</value>
+  </data>
+  <data name="FirstnameContact" xml:space="preserve">
+    <value>Emri*</value>
+  </data>
+  <data name="firstnameReport" xml:space="preserve">
+    <value>Emri</value>
+  </data>
+  <data name="hashalg" xml:space="preserve">
+    <value>Algoritmi i Hashit</value>
+  </data>
+  <data name="HashReport" xml:space="preserve">
+    <value>Vlera hash e dokumentit (SHA256)</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>VERIFIKIMI I NËNSHKRIMIT DIGJITAL</value>
+  </data>
+  <data name="headerTest" xml:space="preserve">
+    <value>Test Dokumenti</value>
+  </data>
+  <data name="infoContact" xml:space="preserve">
+    <value>Me posht mundeni te na kontaktoni per qdo pytje, sygjerim apo shqetesim tuajin. Ju lutemi sigurohuni qe te plotesoni te gjitha fushat te shenuara me *.</value>
+  </data>
+  <data name="infoReport" xml:space="preserve">
+    <value>Nenshkrimi digjital</value>
+  </data>
+  <data name="infoTest" xml:space="preserve">
+    <value>Per testimin e sherbimit tone, nese nuk keni dokument te nenshkruar ne menyr digjitale, me posht mundeni te shkarkoni nje dokument qe mund ta perdorni si testim. Pasi ta shkarkoni dokumentin ju mundeni te ktheheni te faqja per verifikim dhe ta beni verifikimin e dokumentit te shkarkuar.</value>
+  </data>
+  <data name="issuerc" xml:space="preserve">
+    <value>Shteti(C)</value>
+  </data>
+  <data name="issuercn" xml:space="preserve">
+    <value>Emri(CN)</value>
+  </data>
+  <data name="issuerinfo" xml:space="preserve">
+    <value>Te dhenat e leshuesit te qerifikates</value>
+  </data>
+  <data name="issuero" xml:space="preserve">
+    <value>Organizata(O)</value>
+  </data>
+  <data name="issuerou" xml:space="preserve">
+    <value>Njesia organizative(OU)</value>
+  </data>
+  <data name="LastnameContact" xml:space="preserve">
+    <value>Mbiemri*</value>
+  </data>
+  <data name="lastnameReport" xml:space="preserve">
+    <value>Mbiemri</value>
+  </data>
+  <data name="mnuContact" xml:space="preserve">
+    <value>Kontakti</value>
+  </data>
+  <data name="mnuInstruction" xml:space="preserve">
+    <value>Instruksionet</value>
+  </data>
+  <data name="mnuTest" xml:space="preserve">
+    <value>Test Dokument</value>
+  </data>
+  <data name="mnuVerify" xml:space="preserve">
+    <value>Verifikimi</value>
+  </data>
+  <data name="msgContact" xml:space="preserve">
+    <value>Mesazhi*</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Shenim: Bazuar ne Ligjin Per Sherbimet e Shoqerise Informatike, Neni 1 - Përcakton dokumentacionin në formë elektronike juridikisht të barabartë me dokumentacionin tradicional të paraqitur në format të letrës.</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Raporti i verifikimit</value>
+  </data>
+  <data name="serialnumber" xml:space="preserve">
+    <value>Numri serik i certifikates</value>
+  </data>
+  <data name="signerInfo" xml:space="preserve">
+    <value>Te dhenat e nenshkruesit</value>
+  </data>
+  <data name="signerReport" xml:space="preserve">
+    <value>Nenshkruesi</value>
+  </data>
+  <data name="signingtime" xml:space="preserve">
+    <value>Data e nenshkrimit</value>
+  </data>
+  <data name="sizeReport" xml:space="preserve">
+    <value>Madhesia e dokumentit</value>
+  </data>
+  <data name="subjectContact" xml:space="preserve">
+    <value>Titulli</value>
+  </data>
+  <data name="telContact" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="testDoc" xml:space="preserve">
+    <value>Test dokumenti i nenshkruar ne menyre digjitale(dokumenti_i_nenshkruar.pdf)</value>
+  </data>
+  <data name="TimeReport" xml:space="preserve">
+    <value>Koha e verifikimit</value>
+  </data>
+  <data name="uploadDoc" xml:space="preserve">
+    <value>Dokumenti:</value>
+  </data>
+  <data name="uploadHeader" xml:space="preserve">
+    <value>Verifiko nënshkrimin digjital të dokumentit</value>
+  </data>
+  <data name="validfrom" xml:space="preserve">
+    <value>Certifikata valide prej</value>
+  </data>
+  <data name="validto" xml:space="preserve">
+    <value>Certifikata valide deri</value>
+  </data>
+  <data name="welcomeParagraph" xml:space="preserve">
+    <value>Web site per verfikimi i nenshkrimit digjital, ju mundeson verifikimin e nenshkrimit digjital te dokumenteve PDF per autenticitetin e tyre ne vetem disa sekonda. Si rezultat ju do te keni nje raport me te dhenat e nenshkruesit, te cilin raport mund edhe ta shkarkoni.</value>
+  </data>
+</root>

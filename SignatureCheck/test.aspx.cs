@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SignatureCheck
 {
-    public partial class test : System.Web.UI.Page
+    public partial class test : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,10 +16,19 @@ namespace SignatureCheck
 
         protected void ShkarkoTestData_Click(Object sender, EventArgs e)
         {
+            string filename;
+            if (Session["culture"].ToString() == "en-US")
+            {
+                filename = "signed_document.pdf";
+            }
+            else
+            {
+                filename = "dokumenti_i_nenshkruar.pdf";
+            } 
             string pathi = Server.MapPath("TestData") + "\\" + "db.pdf";
             Response.Clear();
             Response.ContentType = "application/pdf";
-            Response.AppendHeader("Content-Disposition", "attachment; filename=dokumenti_i_nenshkruar.pdf");
+            Response.AppendHeader("Content-Disposition", "attachment; filename="+filename);
             Response.TransmitFile(pathi);
         }
     }

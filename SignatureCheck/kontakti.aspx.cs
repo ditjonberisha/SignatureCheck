@@ -10,7 +10,7 @@ using System.Text;
 
 namespace SignatureCheck
 {
-    public partial class kontakti : System.Web.UI.Page
+    public partial class kontakti : Page
     {
         private MailAddress fromAddress = new MailAddress("signaturecheckks@gmail.com");
         private string fromPassword = "signaturecheck";
@@ -24,7 +24,14 @@ namespace SignatureCheck
         {
            if(Emri.Value == "" || Mbiemri.Value == "" || Email.Value == "" || Pytja.Value == "")
            {
-               ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Ju lutem plotesoni te gjitha fushat e shenuar me *.')", true);
+               if (Session["culture"].ToString() == "en-US")
+               {
+                   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please complete all fields marked with *.')", true);
+               }
+               else
+               {
+                   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Ju lutem plotesoni te gjitha fushat e shenuar me *.')", true);
+               }     
            }
            else
            {
@@ -72,11 +79,27 @@ namespace SignatureCheck
                    Subject.Value = "";
                    Pytja.Value = "";
 
-                   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Email u dergua me sukses.')", true);
+                   if (Session["culture"].ToString() == "en-US")
+                   {
+                       ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Email sent successfully.')", true);
+                   }
+                   else
+                   {
+                       ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Email u dergua me sukses.')", true);
+                   } 
+                   
                }
                catch (Exception ex)
                {
-                   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Email nuk u dergua me sukses.')", true);
+                   if (Session["culture"].ToString() == "en-US")
+                   {
+                       ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('E-mail was not sent successfully.')", true);
+                   }
+                   else
+                   {
+                       ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Email nuk u dergua me sukses.')", true);
+                   } 
+                   
                }
            }
         }
