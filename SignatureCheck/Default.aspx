@@ -7,12 +7,10 @@
     <title><asp:Literal ID="Literal9" runat="server" Text="<%$Resources:db.lang,header%>"/></title>
     <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
     <style>
-        p {
-            font-family: Georgia, serif;
-        }
-        h3 {
-            font-family: Georgia, serif;
+        body {
+            font-family: 'Raleway', sans-serif;
         }
     </style>
 </head>
@@ -54,7 +52,7 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <h3><asp:Literal ID="Literal4" runat="server" Text="<%$Resources:db.lang,mnuVerify%>"/></h3>
-            <p align="justify">
+            <p style="text-align:justify">
                 <asp:Literal ID="Literal3" runat="server" Text="<%$Resources:db.lang,welcomeParagraph%>"/>
             </p>
         </div>
@@ -207,7 +205,7 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <hr style="margin-bottom: 5px; border-color: #2f2f2f" />
-            <p align="justify">
+            <p style="text-align:justify">
                 <small class="text-warning">
                     <asp:Literal ID="Literal8" runat="server" Text="<%$Resources:db.lang,Note%>"/>
                 </small>

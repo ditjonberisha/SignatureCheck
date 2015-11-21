@@ -34,7 +34,7 @@ namespace SignatureCheck
                         try
                         {
                             dokumenti = lexuesi.MerrDokumentInfo(fileUpload.PostedFile.FileName, fileUpload.PostedFile.InputStream, verifikuesi);
-                            RezultatiVerfikimit(dokumenti);
+                            RezultatiVerfikimit(dokumenti);                                                    
 
                             uploadFile.Visible = false;
                             Rezultati.Visible = true;

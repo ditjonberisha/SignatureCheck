@@ -7,12 +7,10 @@
     <title><asp:Literal ID="Literal3" runat="server" Text="<%$Resources:db.lang,mnuInstruction%>"/></title>
     <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico" />
     <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
     <style>
-        p {
-            font-family: Georgia, serif;
-        }
-        h3 {
-            font-family: Georgia, serif;
+        body {
+            font-family: 'Raleway', sans-serif;
         }
     </style>
 </head>

@@ -60,8 +60,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\al.jpg" />
     <Content Include="img\header.jpg" />
     <Content Include="img\icon.ico" />
+    <Content Include="img\us.png" />
     <Content Include="instruction.aspx" />
     <Content Include="kontakti.aspx" />
     <Content Include="packages.config" />
