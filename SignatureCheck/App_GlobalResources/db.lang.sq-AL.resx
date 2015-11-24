@@ -255,4 +255,31 @@
   <data name="welcomeParagraph" xml:space="preserve">
     <value>Web site per verfikimi i nenshkrimit digjital, ju mundeson verifikimin e nenshkrimit digjital te dokumenteve PDF per autenticitetin e tyre ne vetem disa sekonda. Si rezultat ju do te keni nje raport me te dhenat e nenshkruesit, te cilin raport mund edhe ta shkarkoni.</value>
   </data>
+  <data name="InstrcDisplayingRes" xml:space="preserve">
+    <value>Paraqitja e raportit të verifikimit:</value>
+  </data>
+  <data name="InstrcHowToUse" xml:space="preserve">
+    <value>Si ta përdorni Verifikimin e nënshkrimit digjital:</value>
+  </data>
+  <data name="InstrcProcessingSig" xml:space="preserve">
+    <value>Si përdoret:</value>
+  </data>
+  <data name="InstrcReceivingTitle" xml:space="preserve">
+    <value>Pranimi i dokumenteve ose të dhënave të nënshkruara:</value>
+  </data>
+  <data name="InstrcReceivingText" xml:space="preserve">
+    <value>Kur të pranoni dokumente ose file të nenshkruar në mënyrë digjitale, se pari ruani dokumentin e nënshkruar në një lokacion ku e mbani mend lehtë për t'i qasur më vonë.</value>
+  </data>
+  <data name="InstrcDisplayingResText" xml:space="preserve">
+    <value>Pas përfundimit të procesit të verifikimit do të paraqitet raporti si më poshtë. Ky raport tregon se a ka rezultuar i vlefshëm verifikimi si dhe përmban të dhënat për nënshkruesin e dokumenti dhe lëshuesin e certifikatës. Në fund të këtij raporti keni butonin “Shkarko raportin” nëse dëshironi ta shkarkoni këtë raport (në formatin PDF), gjithashtu keni edhe butonin “Verifiko dokument tjeter” nese dëshironi të verifikoni dokument tjetër.</value>
+  </data>
+  <data name="InstrcProcessingSigText" xml:space="preserve">
+    <value>Pasi të hapet ueb faqja ose duke klikuar në menyn "Verifikimi" hapet faqja si më poshtë, që shërben për ngarkimin e dokumentit të nënshkruar. Klikoni në pjesën "Choose file" dhe më pas zgjedhni dokumentin që dëshironi të ngarkoni, vlen vetëm për PDF dokumente që janë të nënshkruara. Pas zgjedhjes së dokumentit klikoni në butonin “Verifiko”. Procesi për verifikimin e dokumentit të nënshkruar është inicuar.</value>
+  </data>
+  <data name="InstrcImage1" xml:space="preserve">
+    <value>img/page_sq.png</value>
+  </data>
+  <data name="InstrcImage2" xml:space="preserve">
+    <value>img/report_sq.png</value>
+  </data>
 </root>

@@ -255,4 +255,31 @@
   <data name="welcomeParagraph" xml:space="preserve">
     <value>Web site for verification of digital signature, allows you to verify the digital signature of PDF documents for authenticity in only a few seconds. As a result you will have a report with the data of signatories, which report can be downloaded.</value>
   </data>
+  <data name="InstrcDisplayingRes" xml:space="preserve">
+    <value>Displaying verification reports:</value>
+  </data>
+  <data name="InstrcHowToUse" xml:space="preserve">
+    <value>How to use Signature Check:</value>
+  </data>
+  <data name="InstrcProcessingSig" xml:space="preserve">
+    <value>Processing the signature verification:</value>
+  </data>
+  <data name="InstrcReceivingTitle" xml:space="preserve">
+    <value>Receiving signed documents &amp; data:</value>
+  </data>
+  <data name="InstrcReceivingText" xml:space="preserve">
+    <value>When you receive the digitally signed documents or files, first save the signed document at a location you will easy remember later.</value>
+  </data>
+  <data name="InstrcDisplayingResText" xml:space="preserve">
+    <value>After completion the verification process will be presented the following report. This report shows if verification resulted valid and contains data for the signatory of the document and the issuer of the certificate. At the end of this report you have the "Download report" if you want to download this report (in PDF format), also you have the button " Verify further documents " if you want to check another document.</value>
+  </data>
+  <data name="InstrcProcessingSigText" xml:space="preserve">
+    <value>After opening the website or by clicking the “Verify” menu, opens the following site, which serves for upload signed document. Click on the “Choose file” and then select the document you want to upload, applies only to PDF signed documents. After selecting the document, click on the "Start verification" button. The process for verifying the signed document is initiated.</value>
+  </data>
+  <data name="InstrcImage1" xml:space="preserve">
+    <value>img/page_en.png</value>
+  </data>
+  <data name="InstrcImage2" xml:space="preserve">
+    <value>img/report_en.png</value>
+  </data>
 </root>

@@ -46,9 +46,39 @@
         </div>
     </div>
     <br />
-
-
-
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3><asp:Literal ID="Literal4" runat="server" Text="<%$Resources:db.lang,mnuInstruction%>"/></h3>
+            <b><asp:Literal ID="Literal7" runat="server" Text="<%$Resources:db.lang,InstrcHowToUse%>"/></b>
+        </div>
+    </div>
+    <hr class="col-md-8 col-md-offset-2" />
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                <b><asp:Literal ID="Literal5" runat="server" Text="<%$Resources:db.lang,InstrcReceivingTitle%>"/></b><br />
+                <asp:Literal ID="Literal6" runat="server" Text="<%$Resources:db.lang,InstrcReceivingText%>"/>
+            </p>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                <b><asp:Literal ID="Literal8" runat="server" Text="<%$Resources:db.lang,InstrcProcessingSig%>"/></b><br />
+                <asp:Literal ID="Literal9" runat="server" Text="<%$Resources:db.lang,InstrcProcessingSigText%>"/>
+            </p>
+            <p style=" text-align:center;">
+                <img runat="server" src="<%$Resources:db.lang,InstrcImage1%>" style="width:600px;" />
+            </p>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                <b><asp:Literal ID="Literal10" runat="server" Text="<%$Resources:db.lang,InstrcDisplayingRes%>"/></b><br />
+                <asp:Literal ID="Literal11" runat="server" Text="<%$Resources:db.lang,InstrcDisplayingResText%>"/>
+            </p>
+            <p style=" text-align:center;">
+                <img runat="server" src="<%$Resources:db.lang,InstrcImage2%>" style="width:600px;" />
+            </p>
+        </div>
+    </div>
 
     <div class="row">
         <nav class="navbar navbar-default" style="background-color: #444; margin-bottom: 0px;">

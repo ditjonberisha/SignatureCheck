@@ -223,6 +223,69 @@ namespace Resources.db {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Displaying verification reports:.
+        /// </summary>
+        internal static string InstrcDisplayingRes {
+            get {
+                return ResourceManager.GetString("InstrcDisplayingRes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After completion the verification process will be presented the following report. This report shows if verification resulted valid and contains data for the signatory of the document and the issuer of the certificate. At the end of this report you have the &quot;Download report&quot; if you want to download this report (in PDF format), also you have the button &quot; Verify further documents &quot; if you want to check another document..
+        /// </summary>
+        internal static string InstrcDisplayingResText {
+            get {
+                return ResourceManager.GetString("InstrcDisplayingResText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How to use Signature Check:.
+        /// </summary>
+        internal static string InstrcHowToUse {
+            get {
+                return ResourceManager.GetString("InstrcHowToUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Processing the signature verification:.
+        /// </summary>
+        internal static string InstrcProcessingSig {
+            get {
+                return ResourceManager.GetString("InstrcProcessingSig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After opening the website or by clicking the “Verify” menu opens the following site, which serves for upload signed document. Click on the “Choose file” and then select the document you want to upload, applies only to PDF signed documents. After selecting the document, click on the &quot;Start verification&quot; button. The process for verifying the signed document is initiated..
+        /// </summary>
+        internal static string InstrcProcessingSigText {
+            get {
+                return ResourceManager.GetString("InstrcProcessingSigText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you receive the digitally signed documents or files, first save the signed document at a location you will easy remember later..
+        /// </summary>
+        internal static string InstrcReceivingText {
+            get {
+                return ResourceManager.GetString("InstrcReceivingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receiving signed documents &amp; data:.
+        /// </summary>
+        internal static string InstrcReceivingTitle {
+            get {
+                return ResourceManager.GetString("InstrcReceivingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Country(C).
         /// </summary>
         internal static string issuerc {
